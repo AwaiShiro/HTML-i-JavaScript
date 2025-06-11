@@ -1,0 +1,28 @@
+<html>
+<style>
+    h1{
+        margin-left: 50px;
+    }
+    body{
+        background-color: aqua;
+        margin-left: 550px;
+    }
+    h4{
+        margin-left: 100px;
+    }
+    </style>
+    <body>
+        <h1 aling="center">Zapotrzebowanie na farbe</h1>
+    
+Powierzchnia malowanie(m2)<input id="a" type="number" value="">
+<input type="submit" value="Policz" onClick="pobranie()"><br>
+<h4>Puszka pokryje 4m2</h4>
+<script>
+    function pobranie(){
+        a=document.getElementById("a").value;
+        b="4"
+        c=a/b
+        
+        alert(Math.ceil(c) + " puszek farby jest potrzebne do pomalowania " + "" + b + "m2")
+    }
+</script>

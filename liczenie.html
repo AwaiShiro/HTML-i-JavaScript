@@ -1,0 +1,53 @@
+<html>
+    <style>
+        body{
+            margin-left: 550px;
+            
+            background-color: aqua;
+        }
+        
+
+    </style>
+    
+    <body>
+        
+        <input id="a" type="checkbox"  >Peeling 45 zl<br>
+        <input id="b" type="checkbox"  >Maska 30 zl<br>
+        <input id="c" type="checkbox"  >Masaz 20 zl<br>
+        <input id="d" type="checkbox"  >Makijaz 50 zl<br>
+        <input type="submit" value="sprawdz cene" onClick="pobranie()">
+    
+        
+        <script>
+            function pobranie(){
+                a=document.getElementById("a").checked;
+                b=document.getElementById("b").checked;
+                c=document.getElementById("c").checked;
+                d=document.getElementById("d").checked;
+                if(a==true){
+                    a=45;
+                }else{
+                    a=0;
+                }
+                if(b==true){
+                    b=30;
+                }else{
+                    b=0;
+                }
+                if(c==true){
+                    c=20;
+                }else{
+                    c=0;
+                }
+                if(d==true){
+                    d=50;
+                }else{
+                    d=0;
+                }
+                alert(a + b + c + d); 
+            }
+        </script>
+    </body>
+    </html>
+        
+
