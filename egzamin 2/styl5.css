@@ -1,0 +1,56 @@
+img{
+    float: left;
+}
+header{
+    background-color: #1C59A7 ;
+    text-align: center;
+    height: 80px;
+    color: white;
+    
+}
+#lewy{
+    background-color:#3A70B5 ;
+    width: 33%;
+    height: 200px;
+    float: left;
+
+}
+#srodkowy{
+    background-color:  #5A8AC8;
+    width: 33%;
+    height: 200px;
+    float: left;
+}
+#prawy{
+    background-color:#86ACDD ;
+    text-align: center;
+    width: 34%;
+    height: 200px;
+    float: left;
+}
+#dolny{
+   background-color:  #86ACDD;
+    text-align: center;
+    height: 300px;
+
+
+}
+footer{
+    background-color:  #1C59A7;
+    color: white;
+    padding-top:  5px;
+}
+h1{
+    float: left;
+    text-align: center;
+}
+#odsyłacz{
+    background-color: yellow;
+    color: blue;
+    margin:10px;
+    width: 100px;
+
+}
+#logo{
+    margin-left: 200px;
+}
