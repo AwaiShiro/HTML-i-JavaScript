@@ -1,0 +1,55 @@
+body{
+    font-family: Georgia;
+}
+#lewy{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+    float: left;
+}
+#prawy{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    float: left;
+    font-size: 100%;
+
+}
+footer{
+    background-color: dimgray;
+    color: white;
+}
+img{
+    padding: 10px;
+    float: left;
+    border:solid white 1px;
+    
+    
+}
+#punkty{
+    margin-right: 300px;
+    float: left;
+    
+}
+#tekst{
+    clear: both;
+}
+p{
+    margin-left: 10px;
+
+}
+#indigo{
+    background-color: indigo;
+}
+#olive{
+    background-color: olive;
+}
+#steelblue{
+    background-color: steelblue;
+
+}
+#3{
+    font-size: 100%;
+}

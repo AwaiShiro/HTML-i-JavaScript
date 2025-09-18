@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl6.css">
+    <title>Style w Java script</title>
+</head>
+<body>
+    <nav id="lewy">
+        <h1>Konfigurator stylu</h1>
+        <p>Podaj kolor tła</p><br>
+        <button id="indigo" onclick="zmiana('indigo')">Indigo</button>
+        <button id="steelblue" onclick="zmiana('steelblue')">Steelblue</button>
+        <button id="olive" onclick="zmiana('olive')">Olive</button>
+        <p>Podaj kolor czcionki</p>
+        <select onchange="czcionka()" id="select">
+            <Option id="white" value="White">White</Option>
+            <option id="tan" value="Tan">Tan</option>
+            <option id="bisque" value="Bisque">Bisque</option>
+            <option id="plum" value="Plum">Plum</option>
+        </select>
+        <p>Podaj rozmiar czcionki w procentach</p>
+        <input type="text" value="100%" id="3" onpointerout="rozmiar()">
+        <p>Czy rysunek ma mieć ramkę?</p>
+        <input type="checkbox" checked="true" id="border" onchange="ramka()">Rysuj ramkę
+        <p>Jaki jest typ punktora listy?</p>
+        <input type="radio" name="1" checked="true" id="dysk" onchange="punktory()">dysk<input type="radio" name="1" id="kwadrat" onchange="punktory()">kwadrat<input type="radio" name="1" id="okrag" onchange="punktory()">okrąg
+    </nav>
+
+    <nav id="prawy">
+    <img id="obraz"src="gibraltar.jpg" alt="półwysep gibraltar">
+        <ul id="punkty">
+        <li>element 1</li>
+        <li>element 2</li>
+        <li>element 3</li>
+        </ul>
+        <p id="tekst">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </nav> 
+    <footer>
+        Autor<br>
+        123456789012
+    </footer>
+    <script>
+        function zmiana(k){
+            document.getElementById("prawy").style.backgroundColor=k;
+        }
+        function czcionka(){
+            let p=document.getElementById("select").value;
+            document.getElementById("prawy").style.color=p;
+        }
+        function rozmiar(){
+            let r=document.getElementById("3").value;
+            r= r+"%"
+            document.getElementById("prawy").style.fontSize=r;
+            
+        }
+        function ramka(){
+            let b=document.getElementById("border").checked
+            if(b==false){
+            document.getElementById("obraz").style.border="0px";
+            }
+            else{
+                document.getElementById("obraz").style.border="Solid,White,1px";
+            
+            }
+        }
+        function punktory(){
+            let a=document.getElementById("dysk").checked;
+            let b=document.getElementById("kwadrat").checked;
+            let c=document.getElementById("okrag").checked;
+            if(a==true){
+                document.getElementById("punkty").style.listStyleType="disk";
+            }
+             if(b==true){
+                document.getElementById("punkty").style.listStyleType="square";
+            }
+             if(c==true){
+                document.getElementById("punkty").style.listStyleType="circle";
+            }
+        }
+
+    </script>
+</body>
+</html>
