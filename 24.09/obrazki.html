@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <nav>
+        <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" id="pszczola">
+        <input type="radio" name="1" id="pszczola1">Blur
+        <input type="radio" name="1" id="pszczola2">Sepia
+        <input type="radio" name="1" id="pszczola3">Negatyw
+        <button onclick="zmiana1()">Zastosuj</button>
+        
+
+        
+ 
+    </nav>
+    <nav>
+        <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="obraz2"><br>
+        <button onclick="zmiana2()">Kolorowy</button>
+        <button onclick="zmiana3()">Czarno-Biały</button>
+    </nav>
+
+    <nav>
+        <img src="owoce.jpg" alt="Kosz pełen owoców" id="obraz3">
+        <input id="suwak" type="range" value="100" min="0" max="100"><br>
+        <button onclick="zmiana4()">Zastosuj</button>
+        
+    </nav>
+    <nav>
+        <img src="zolw.jpg" alt="Żółw w wodzie" id="obraz4">
+        <input id="suwak1"type="range" value="100" min="0" max="250"><br>
+         <button onclick="zmiana5()">Zastosuj</button>
+    </nav>
+    
+
+    
+    <footer>
+        <a href="http://www.css.com/"<p id="odnosnik">Zobacz inne efekty obrazu</p></a>
+        <p>Stronę wykonał</p>
+    </footer>
+    <script>
+        function zmiana1(){
+        let a=document.getElementById("pszczola1").checked;
+        let b=document.getElementById("pszczola2").checked;
+        let c=document.getElementById("pszczola3").checked;
+       
+        if(a==true)
+        document.getElementById("pszczola").style.filter="blur(4px)";
+        if(b==true)
+        document.getElementById("pszczola").style.filter="sepia(100%)";
+        if(c==true)
+        document.getElementById("pszczola").style.filter="invert(100%)";
+        
+        }
+        function zmiana2(){
+            document.getElementById("obraz2").style.filter="grayscale(0%)";
+        }
+        function zmiana3(){
+            document.getElementById("obraz2").style.filter="grayscale(100%)";
+        }
+        function zmiana4(){
+            let a=document.getElementById("suwak").value
+            
+            a="opacity(" + a + "%)";
+            document.getElementById("obraz3").style.filter=a;
+        }
+        function zmiana5(){
+            let a=document.getElementById("suwak1").value;
+            
+            a="brightness(" + a + "%)";
+            
+            document.getElementById("obraz4").style.filter=a;
+        }
+    </script>
+</body>
+</html>

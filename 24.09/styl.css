@@ -1,0 +1,48 @@
+body{
+    font-family: serif;
+    text-align: center;
+}
+header{
+    background-color: indigo;
+    color:white;
+    font-style: italic;
+    padding: 2px;
+}
+footer{
+    background-color: indigo;
+    color:white;
+    text-transform: unset;
+    padding: 2px;
+    clear: both;
+}
+nav{
+    width: 50%;
+    height: 470px;
+    float: left;
+}
+img{
+    padding: 3px;
+    margin: 10px;
+    border:slateblue dotted 2px;
+}
+#odnosnik{
+    color: white;
+}
+button{
+    background-color: slateblue;
+    color:white;
+    border: 0px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    
+    
+}
+#suwak,#suwak1{
+    width: 80%;
+}
+button:hover{
+    background-color: indigo;
+}
