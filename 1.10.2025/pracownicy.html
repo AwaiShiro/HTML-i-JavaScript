@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasz zespół</title>
+    <link rel="stylesheet" href="styl.css">
+
+</head>
+<body>
+    <header id="1">
+        <img src="logo1.png" alt="logo firmy">
+    </header>
+    <header id="2">
+        <h1>Nasz zespół</h1>
+    </header>
+<main>
+    <section class="karta_pracownicza">
+        <img src="osoba1.jpg" alt="Dyrektor">
+        <h2>Krzysztof Dobromilski</h2>
+        <h3>Dyrektor</h3>
+        <p>Firma logistyczna była jego marzeniem. Zrealizował je 10 lat temu. Nasza firma prosperuje dzięki Krzysztofowi</p>
+        <p>telefon: 111222333</p>
+        <h5><a href="mailto:Krzysztof.Dobromilski@firma.pl">Kontakt</a></h5>
+    </section>
+    <section  class="karta_pracownicza">
+        <img src="osoba2.jpg" alt="Kierownik logistyków">
+        <h2>Joanna Trojanowska</h2>
+        <h3>Kierownik logistyków</h3>
+        <p>Od początku firmy z nami. Wie jak zorganizować pracę swoich logistyków aby wszystko było na czas</p>
+        <p>telefon: 222333444</p>
+        <h5><a href="mailto:Joanna.Trojanowska@firma.pl">Kontakt</a></h5>
+    </section>
+    <section class="karta_pracownicza">
+        <img src="osoba3.jpg" alt="Kadry">
+        <h2>Ewa Nowak</h2>
+        <h3>Księgowość i kadry</h3>
+        <p>Od lat finanse powierzamy niezawodnej Ewie. Twardą ręką trzyma kasę i dba o wszystkich pracowników</p>
+        <p>telefon: 333444555</p>
+        <h5><a href="mailto:Ewa.Nowak@firma.pl">Kontakt</a></h5>
+    </section>
+</main>
+<nav>
+    <q id="c1" onclick="cytat()">Każdego dnia stawiam sobie nieosiągalne wyzwania i próbuję je wykonać</q>
+    <p id="p1">- Krzysztof</p>
+    <q id="c2" onclick="cytat1()">Nie bój się porażek, im więcej ich rozwiążesz, tym szybciej osiągniesz cel</q>
+    <p id="p2">- Joanna</p>
+    <q id="c3" onclick="cytat2()">Niezadowolony pracownik jest dla mnie źródłem nauki</q>
+    <p id="p3">- Ewa</p>
+</nav>
+<footer>
+<p>Strone wykonał:12345678976543</p>
+</footer>
+<script>
+    function cytat(){
+document.getElementById("c2").style.display="block";
+document.getElementById("c1").style.display="none";
+document.getElementById("p1").style.display="none";
+document.getElementById("p2").style.display="block"
+
+
+    }
+    function cytat1(){
+document.getElementById("c3").style.display="block";
+document.getElementById("c2").style.display="none";
+document.getElementById("p2").style.display="none";
+document.getElementById("p3").style.display="block"
+    }
+    function cytat2(){
+document.getElementById("c1").style.display="block";
+document.getElementById("c3").style.display="none";
+document.getElementById("p3").style.display="none";
+document.getElementById("p1").style.display="block"
+    }
+
+</script>
+</body>
+</html>

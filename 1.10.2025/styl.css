@@ -1,0 +1,55 @@
+body{
+    font-family: serif;
+}
+header{
+    background-color: darkcyan;
+    color: white;
+    width: 50%;
+    height: 100px;
+    letter-spacing: 15px;
+    float: left;
+}
+footer{
+    background-color: darkcyan ;
+    color: white;
+}
+.karta_pracownicza{
+    background-color: azure;
+    width: 30%;
+    
+    margin: 1%;
+    box-shadow:  4px 4px 8px dimgray;
+    img{
+        width: 100%;
+    }
+    float: left;
+}
+a{
+    color: white;
+}
+h5{
+    background-color: teal;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    
+}
+h5:hover{
+    background-color: lightseagreen;
+}
+p,h2,h3{
+    margin: 15px;
+}
+nav{
+    text-align: center;
+    padding-top:30px ;
+    padding-bottom:30px ;
+    font-style: italic;
+    clear: both;
+}
+
+#c2,#c3,#p2,#p3{
+    display: none;
+}
