@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Chat</h2>
+    </header>
+    <nav id="boczny">
+        <h3>Chaty</h3>
+        <ol>
+            <li>Ogólny</li>
+            <li>Tematyczne<ul>
+                <li>Turystyczne</li>
+                <li>Żeglarski</li>
+                <li>Filatelistyczny</li>
+                <li>Hodowla zwierzątek domowych</li>
+            </ul></li>
+        </ol>
+        <h3>Uczestnicy</h3>
+        <p>Jolanta Nowak</p>
+        <img src="Jolka.jpg" alt="Jolanta Nowak" id="obraz3">
+        <p>Krzysztof Łukasiński</p>
+        <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński" id="obraz4">
+
+    </nav>
+    <main>
+        <section id="sekcja">
+        <nav class="jolka">
+            <img src="Jolka.jpg" alt="" id="obraz1">
+            <p>Cześć idziesz jutro do kina?</p>
+            
+        </nav>
+        <nav class="krzysiek" >
+            
+            <img src="Krzysiek.jpg" alt="" id="obraz2">
+            <p>Tak! A ty</p>
+
+
+        </nav>
+        </section>
+        Wpisz wiadomość<input type="text" id="tekst"><button id="przycisk" onclick="wyslij()">Wyślij</button><br>
+        <Button id="przycisk2" onclick="wyslij1()">Generuj losową odpowiedz</Button> 
+    </main>
+    
+    <footer>
+        <h5>Chat wykonał:123456789012</h5>
+    </footer>
+    <script>
+        function wyslij(){
+            let a=document.getElementById("tekst").value;
+            let chat=document.getElementById("sekcja");
+
+            let Jola=document.createElement("nav");
+            Jola.classList.add("jolka");
+            let img=document.createElement('img');
+            img.src="Jolka.jpg"
+            let p=document.createElement("p");
+            p.textContent=a;
+            img.style.float="left"
+            Jola.appendChild(img);
+            Jola.appendChild(p);
+            chat.appendChild(Jola);
+            img.scrollIntoView(Jola);
+
+            
+            
+           
+                    
+                
+            
+            
+        }
+
+        function wyslij1(){
+            
+            
+
+            let chat=document.getElementById("sekcja");
+
+            let krzysiek=document.createElement("nav");
+            krzysiek.classList.add("krzysiek");
+            let img=document.createElement('img');
+            img.src="Krzysiek.jpg"
+           img.style.float="right"
+            let tablica = ["Świetnie!","Kto gra główną rolę?","Lubisz filmy Tego reżysera?","Będę 10 minut wcześniej","Może kupimy sobie popcorn?","Ja wolę Colę","Zaproszę jeszcze Grześka","Tydzień temu też byłem w kinie na Diunie","Ja funduję bilety"];
+                
+
+            let m = Math.ceil((Math.random() *10)-2);
+            if(m<0){
+                m=0
+            }
+            alert(m)
+            let p=document.createElement('p');
+
+            p.textContent=tablica[m];
+            krzysiek.appendChild(img);
+            krzysiek.appendChild(p);
+            chat.appendChild(krzysiek);
+            img.scrollIntoView(krzysiek);
+        }
+    </script>
+    
+</body>
+</html>
