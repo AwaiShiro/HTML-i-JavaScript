@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma IT</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+    <main>
+        <section id="logo">
+            <img src="logo.png" alt="firma it">
+        </section>
+        <section id="menu">
+            <a href="index.html">Strona Główna</a>
+            <a href="uslugi.html">Usługi</a>
+            <a href="kontakt.html">Kontakt</a>
+
+        </section>
+        <header>
+            <img src="baner2.gif" alt="Usługi informatyczne">
+
+        </header>
+        <nav id="">
+            <h2>Kontakt</h2>
+            <table>
+                <tr><td>Imie</td></tr>
+                <tr><td><input type="text" id="imie"></td></tr>
+                <tr><td>Nazwisko</td></tr>
+                <tr><td><input type="text" id="nazwisko"></td></tr>
+                <tr><td>Email</td></tr>
+                <tr><td><input type="email" id="emial"></td></tr>
+                <tr><td>Zgłoszenie</td></tr>
+                    <td><textarea name="" id="text" cols="40" rows="10"></textarea></td></tr>
+                <tr><td><input type="checkbox" id="check">Zapoznałam/em się z regulaminem</td></tr>
+                <tr><td><button onclick="reset()">Resetuj</button><button onclick="przeslij()">Prześlij</button></td></tr>
+                
+            </table>
+            
+
+            
+            <hr>
+            <nav id="nav">
+                <p id="p"></p>
+            </nav>
+        </nav>
+        <footer>
+            <b>Autor Strony:12345672345678</b>
+        </footer>
+    </main>
+    <script>
+        function przeslij(){
+            let a=document.getElementById("imie").value;
+            let b=document.getElementById("nazwisko").value;
+            let c=document.getElementById("emial").value;
+            let d=document.getElementById("text").value;
+            let e=document.getElementById("check").checked;
+            
+            if(e==false){
+                document.getElementById("nav").innerHTML="<p style='color: red;'>Musisz zapoznać się z regulaminem</p>"
+            }
+            else{
+                document.getElementById("p").innerHTML=a.toUpperCase()+ " " + b.toUpperCase() + "<br>" + "Zgłoszenie: " + d
+                document.getElementById("p").style.color="navy"
+            }
+
+        }
+        function reset(){
+            let a=document.getElementById("imie").value=null
+            let b=document.getElementById("nazwisko").value=null
+            let c=document.getElementById("emial").value=null
+            let d=document.getElementById("text").value=null
+            let e=document.getElementById("check").checked=false
+            
+        }
+
+        
+    </script>
+</body>
+</html>
