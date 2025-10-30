@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienia hurtowe</title>
+    <link rel="stylesheet" href="styl4.css">
+</head>
+<body>
+    <header>
+        <h1>Sieci komputerowe</h1>
+    </header>
+    <nav>
+        <h2>Aktualizacja i zamówienia materiałów</h2>
+        <p>Do wewnętrznego użytku firmy</p>
+        <img src="obraz.png" alt="sieć komputerowa">
+    </nav>
+    <section>
+        <table>
+            <tr><th>Produkt</th><th>Jednostka</th><th>Dostępna ilość</th><th>Aktualizacja</th><th>Zamówienie</th></tr>
+            <tr><td id="nazwa1">Skrętka U/UTP drut</td><td>metr</td><td id="1">20</td><td><button onclick="aktualizacja(1)">Aktualizacja</button></td><td><button onclick="zamowienia(1)">Zamów</button></td></tr>
+            <tr><td id="nazwa2">Skrętka U/UTP linka</td><td>metr</td><td id="2">2</td><td><button onclick="aktualizacja(2)">Aktualizacja</button></td><td><button onclick="zamowienia(2)">Zamów</button></td></tr>
+            <tr><td id="nazwa3">Wtyki 8P8C</td><td>sztuki</td><td id="3">10</td><td><button onclick="aktualizacja(3)">Aktualizacja</button></td><td><button onclick="zamowienia(3)">Zamów</button></td></tr>
+            <tr><td id="nazwa4">Moduły Keystone</td><td>sztuki</td><td id="4">30</td><td><button onclick="aktualizacja(4)">Aktualizacja</button></td><td><button onclick="zamowienia(4)">Zamów</button></td></tr>
+        </table>
+    </section>
+    <footer>
+        <a href="http://sieci.pl/">Nasza strona internetowa</a>
+        <p>Stronę przygotował:12345678909876</p>
+    </footer>
+   <script>
+    id=0
+    onclick(ilosc())
+    function ilosc(){
+        i1=document.getElementById("1").textContent;
+        i2=document.getElementById("2").textContent;
+        i3=document.getElementById("3").textContent;
+        i4=document.getElementById("4").textContent;
+
+        l1=parseInt(i1);
+        l2=parseInt(i2);
+        l3=parseInt(i3);
+        l4=parseInt(i4);
+        if (l1==0){
+            document.getElementById("1").style.backgroundColor="Red"
+        }
+        if (l2==0){
+            document.getElementById("2").style.backgroundColor="Red"
+        }
+        if (l3==0){
+            document.getElementById("3").style.backgroundColor="Red"
+        }
+        if (l4==0){
+            document.getElementById("4").style.backgroundColor="Red"
+        }
+        if (l1<=5 & l1>=1){
+            document.getElementById("1").style.backgroundColor="yellow"
+        }
+        if (l2<=5 & l2>=1){
+            document.getElementById("2").style.backgroundColor="yellow"
+        }
+        if (l3<=5 & l3>=1){
+            document.getElementById("3").style.backgroundColor="yellow"
+        }
+        if (l4<=5 & l4>=1){
+            document.getElementById("4").style.backgroundColor="yellow"
+        }}
+    function aktualizacja(k){
+        liczba= prompt("Podaj liczbe sztuk:")
+        b= parseFloat(k)
+        document.getElementById(k).innerHTML=liczba
+        onabort(ilosc())
+    }
+    function zamowienia(z){
+        id=id+1;
+        nazwa = document.getElementById("nazwa" + z).textContent;
+        alert("Zamówienie nr:" + " "+ id + " " + "Produkt:" + " " + nazwa)
+
+    }
+   </script> 
+</body>
+</html>
